@@ -1,0 +1,39 @@
+{
+  "ha_url": "http://homeassistant.local:8123",
+  "ha_token": "YOUR_LONG_LIVED_TOKEN_HERE",
+
+  "entities": {
+    "solar":          "sensor.YOUR_SOLAR_SENSOR",
+    "grid":           "sensor.YOUR_GRID_SENSOR",
+    "battery_power":  "sensor.YOUR_BATTERY_POWER_SENSOR",
+    "battery_soc":    "sensor.YOUR_BATTERY_SOC_SENSOR",
+    "home":           "sensor.YOUR_HOME_LOAD_SENSOR"
+  },
+
+  "sign_convention": {
+    "grid_positive_is_import":    true,
+    "battery_positive_is_charge": true
+  },
+
+  "devices": [
+    { "entity": "sensor.YOUR_DEVICE_1_POWER", "name": "Device 1" },
+    { "entity": "sensor.YOUR_DEVICE_2_POWER", "name": "Device 2" },
+    { "entity": "sensor.YOUR_DEVICE_3_POWER", "name": "Device 3" },
+    { "entity": "sensor.YOUR_DEVICE_4_POWER", "name": "Device 4" }
+  ],
+
+  "weather_entity": "weather.forecast_home",
+
+  "schedule": {
+    "day_start":      "06:30",
+    "day_end":        "22:00",
+    "day_interval":   120,
+    "night_interval": 300
+  },
+
+  "epd_model": "epd7in5_V2",
+
+  "display": {
+    "title": "Solar Dashboard"
+  }
+}
